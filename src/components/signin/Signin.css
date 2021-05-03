@@ -173,3 +173,33 @@
         width: 100%;
         object-fit: cover;
   }
+  @media (max-width: 900px) {
+    .row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;    
+  }
+  .column-image{
+      width: 0;
+      display: none;
+  }
+  .column-form{
+    margin-top:-40% ;
+    width: 100%;
+}
+.form__actions span {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.form__actions .remeber_me input,
+  .form__actions .remeber_me .checkmark{
+    width: 20px;
+    height: 20px;
+    top: 5px;
+  }
+  .form__actions .forgot_password{
+    top: 8px;
+  }
+  }
