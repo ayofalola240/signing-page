@@ -11,7 +11,6 @@ const Header = ({ history }) => {
                 <span className='item' onClick={() => { history.push('/register') }}>
                     register
             </span>
-
             </div>
         </nav>
     )
