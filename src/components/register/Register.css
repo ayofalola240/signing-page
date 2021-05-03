@@ -1,3 +1,198 @@
-.regContainer{
-    color: red;
+*{
+    overflow: hidden;
+    box-sizing: border-box;
 }
+.logContainer{
+    height: 100vh;  
+}
+.row{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.column-image{
+    width: 50%;
+}
+.column-form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form {
+    margin: 0 auto;
+    width: 70%;
+    overflow: hidden;
+  }
+  .form-title{
+    font-size: 30px;
+    font-weight: bold;
+    color:rgb(35, 122, 71) ;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .name{
+    width: 45%;
+  }
+  .input-field {
+     padding: 3px 0;
+  }
+  .input-field input{
+      border-radius: 5px;
+      width: 100%;
+      outline: none;
+      border: none;
+      position: relative;
+      outline: none;
+      padding: 10px 15px 10px 15px;
+      background: #eee;
+  }
+    /* For Input Autofill */
+    .input-field input:-webkit-autofill,
+    .input-field input:-webkit-autofill:hover, 
+    .input-field input:-webkit-autofill:focus, 
+    .input-field input:-webkit-autofill:active{
+      -webkit-box-shadow: 0 0 0 30px #eee inset !important;
+      box-shadow: 0 0 0 30px #eee inset !important;
+      background: transparent;
+    }
+  .input-field label{
+      font-size: 12px;
+      font-weight: 400;
+      color:  rgb(184, 180, 180); 
+  }
+ 
+ /* Form Actions */
+ #form .form__actions{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Next Label And Next Div */
+  #form  .form__actions > label:hover,
+  #form  .form__actions > div:hover{
+    opacity: 0.7;
+  }
+  /* Remeber Me And Input */
+  .form__actions .remeber_me,
+  .form__actions .remeber_me input{  
+    position: relative;
+    cursor: pointer;
+    font-size: 11px;
+    color: rgb(184, 180, 180);
+  }
+  /* Input And Checkmark box */
+  .form__actions .remeber_me input,
+  .form__actions .remeber_me .checkmark{
+    width: 15px;
+    height: 15px;
+  }
+  .form__actions .remeber_me input{
+    opacity: 0;
+    z-index: 2;
+  }
+  .form__actions .remeber_me .checkmark{
+    position: absolute;
+    left: 0;
+    border: 2px solid rgb(184, 180, 180); 
+    border-radius: 3px;
+    z-index: 1;
+  }
+  /* Create Check Mark */
+  .form__actions .remeber_me .checkmark::after{
+    content: "";
+    position: absolute;
+    opacity: 0;
+    left: 3px;
+    width: 3px;
+    height: 6px;
+    border: solid rgb(46, 204, 113);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg) scale(0);
+    transform: rotate(45deg) scale(0);
+    transition: 0.3s ease-in-out;
+  }
+  /* When Input Checkbox Is Checked */
+  .form__actions .remeber_me input:checked ~ .checkmark ~ span{
+    color:rgb(46, 204, 113);
+  }
+  .form__actions .remeber_me input:checked ~ .checkmark{
+    border-color:rgb(46, 204, 113);
+  }
+  .form__actions .remeber_me input:checked ~ .checkmark::after{
+    opacity: 1;
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+ 
+  /* Forgot Password */
+  .form__actions .forgot_password{
+    position: relative;
+    top: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    color:rgb(46, 204, 113);
+    transition: 0.3s ease-in-out;
+    font-weight: 400;
+  }
+  button.submit-button{
+    position: relative;
+    width: 150px;
+    background-color:rgb(35, 122, 71);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: block;
+    outline: none;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    text-transform: uppercase;
+  }
+  .sign-up__form button.submit-button{ /* Sign Up Submit Button */
+    margin-top: 25px;
+  }
+  button.submit-button:hover{
+    opacity: 0.8;
+  }
+  button.submit-button:active{
+    opacity: 1;
+  }
+  /* image */
+  .image{
+        width: 100%;
+        object-fit: cover;
+  }
+  @media (max-width: 900px) {
+    .row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;    
+  }
+  .column-image{
+      width: 0;
+      display: none;
+  }
+  .column-form{
+    margin-top:-40% ;
+    width: 100%;
+}
+.form__actions span {
+  font-size: 13px;
+  font-weight: 300;
+}
+  .form__actions .forgot_password{
+    top: 8px;
+  }
+  }

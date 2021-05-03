@@ -45,7 +45,7 @@ const Signin = () => {
                         </div>
                         <div className="input-field">
                             <label htmlFor="password" >Password</label>
-                            <input type='password' placeholder='Confirm Password' value={password}
+                            <input type='password' placeholder='Password' value={password}
                                 onChange={e => setPassword(e.target.value)} >
                             </input>
                         </div>

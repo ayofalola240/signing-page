@@ -24,7 +24,7 @@
 }
 #form {
     margin: 0 auto;
-    width: 60%;
+    width: 70%;
     padding: 0rem 0rem;
     overflow: hidden;
   }
@@ -55,8 +55,8 @@
     .input-field input:-webkit-autofill:hover, 
     .input-field input:-webkit-autofill:focus, 
     .input-field input:-webkit-autofill:active{
-      -webkit-box-shadow: 0 0 0 30px white inset !important;
-      box-shadow: 0 0 0 30px white inset !important;
+      -webkit-box-shadow: 0 0 0 30px #eee inset !important;
+      box-shadow: 0 0 0 30px #eee inset !important;
       background: transparent;
     }
   .input-field label{
