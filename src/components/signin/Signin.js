@@ -35,7 +35,7 @@ const Signin = () => {
             <div className='row'>
                 <div className='column-form'>
                     <form id="form" className='sign-up-form' onSubmit={submitHandler}>
-                        <h1 className='form-title'>Sign Up</h1>
+                        <h1 className='form-title'>Sign In</h1>
                         <div className="input-field">
                             <label htmlFor="email" >Email/Username</label>
                             <input type='email' placeholder='Email' value={email}
